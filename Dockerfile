@@ -10,4 +10,4 @@ COPY . .
 
 EXPOSE 80
 
-CMD [ "node", "webapp.js" ]
+CMD [ "node", "index.js" ]
