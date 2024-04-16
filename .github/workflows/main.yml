@@ -14,13 +14,13 @@ jobs:
 
     - name: Build Image
       run: docker build -t jarrettgaither/liatriowebapp .
-  container-tester:
-      runs-on: ubuntu-latest
-      container: 
-        image: jarrettgaither/liatriowebapp
-      steps:
-         - name: run tests
-           uses: liatrio/github-actions/apprentice-action@master
 
-         - name: Stop Container
-           run: docker stop container1
+    - name: Run Container
+      run: docker run -p 80:80 --name container1 jarrettgaither/liatriowebapp
+           kill
+    
+    - name: run tests
+      uses: liatrio/github-actions/apprentice-action@master
+
+    - name: Stop Container
+      run: docker stop container1
