@@ -16,8 +16,7 @@ jobs:
       run: docker build -t jarrettgaither/liatriowebapp .
 
     - name: Run Container
-      run: docker run -p 80:80 --name container1 jarrettgaither/liatriowebapp
-           kill
+      run: docker run -d -p 80:80 --name container1 jarrettgaither/liatriowebapp
     
     - name: run tests
       uses: liatrio/github-actions/apprentice-action@master
