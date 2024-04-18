@@ -8,7 +8,11 @@ app.get('/', (req, res) => {
         message: 'My name is Jarrett Gaither',
         timestamp: Date.now()
     };
-    res.json(data);
+
+    const dataAsString = JSON.stringify(data);
+    const minString = dataAsString.replace(/\s+/g, '');
+
+    res.json(JSON.parse(minString));
 
 });
 
