@@ -9,10 +9,7 @@ app.get('/', (req, res) => {
         timestamp: Date.now()
     };
 
-    const dataAsString = JSON.stringify(data);
-    const minString = dataAsString.replace(/\s+/g, '');
-
-    res.json(JSON.parse(minString));
+    res.json(data);
 
 });
 
