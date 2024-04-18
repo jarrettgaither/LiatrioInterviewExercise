@@ -6,7 +6,7 @@ app.get('/', (req, res) => {
 
     const data = {
         message: 'My name is Jarrett Gaither',
-        timestamp: new Date().toISOString() 
+        timestamp: Date.now()
     };
     res.json(data);
 
