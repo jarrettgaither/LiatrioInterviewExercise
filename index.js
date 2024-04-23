@@ -6,6 +6,7 @@ app.get('/', (req, res) => {
 
     const data = {
         message: 'My name is Jarrett Gaither',
+        newField: 'Hello World',
         timestamp: Date.now()
     };
 
