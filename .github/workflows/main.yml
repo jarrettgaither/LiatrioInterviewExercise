@@ -1,4 +1,4 @@
-name: Tester
+name: myWorkflow
 
 on:
   push:
@@ -16,7 +16,7 @@ jobs:
       run: docker build -t jarrettgaither/liatriowebapp .
 
     - name: Run Container
-      run: docker run -d -p 80:80 --name container1 jarrettgaither/liatriowebapp
+      run: docker run -d -p 80:8080 --name container1 jarrettgaither/liatriowebapp
     
     - name: run tests
       uses: liatrio/github-actions/apprentice-action@0b41561cca6822cc8d880fe0e49e7807a41fdf91
